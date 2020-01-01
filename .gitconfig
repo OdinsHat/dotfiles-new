@@ -1,0 +1,37 @@
+[user]
+	email = doug@tintophat.com
+	name = Doug Bromley
+
+[alias]
+	st = status
+	a = add
+	b = !git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'
+	c = commit -m
+	changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
+	cob = checkout -b
+	devs = shortlog -n -e -s
+	ds = diff --staged
+	ll = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold yellow)— %an%C(reset) %C(bold blue)<%ae>%C(bold red)%d%C(reset)' --abbrev-commit --date=relative
+	panic = !tar cvf ../git_panic.tar *
+	rao = remote add origin
+	s = status -s
+	st = status
+	tidy = !git gc && git clean -dfx && git stash clear
+	undo-commit = reset --soft HEAD~1
+	wdiff = diff --word-diff=plain
+	who = shortlog -n -e -s
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = true
+
+[core]
+    editor = vim
+
+[diff]
+    tool = vimdiff
+
+[help]
+    autocorrect = 1
