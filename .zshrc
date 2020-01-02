@@ -16,6 +16,8 @@ export NVM_DIR="$HOME/.nvm"
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Code
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/code
 source /usr/bin/virtualenvwrapper.sh
 
 # ZPlugin plugins and config
@@ -192,4 +194,6 @@ if [ -f '/home/josh/Code/google-cloud-sdk/path.zsh.inc' ]; then . '/home/josh/Co
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/josh/Code/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/josh/Code/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Setup config alias for keeping dotfiles in check
 alias config='/usr/bin/git --git-dir=/home/josh/.cfg/ --work-tree=/home/josh'
