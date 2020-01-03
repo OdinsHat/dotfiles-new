@@ -1,0 +1,12 @@
+# /home/josh/.config/tmuxinator/guake-tyr.yml
+
+name: guake-tyr
+root: ~/Code/
+
+windows:
+  - editor:
+      layout: main-vertical
+      synchronize: after
+      panes:
+        - vim
+        - ssh tyr; goaccess --log-format=COMBINED /var/log/nginx/seotools-a.log

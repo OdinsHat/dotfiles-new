@@ -1,0 +1,25 @@
+# ~/.tmuxinator/monitor.yml
+
+name: monitor
+root: ~/
+
+windows:
+  - status_things:
+      layout: main-horizontal
+      panes:
+        - htop
+        - uptime
+        - whoami; lsb_release -a
+  - io_things:
+      layout: tiled
+      panes:
+        - lsof
+        - iostat -w 10
+        - netstat
+  - logs:
+      layout: main-vertical
+      panes:
+        - lastlog:
+          - tail -F /var/log/lastlog
+        - check_journal:
+          - journalctl -xe
